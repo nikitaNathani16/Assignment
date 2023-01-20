@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" controller="AuraControllerCalc">
+    <aura:attribute name="label" type="String" default=""/>
+    
+    <aura:registerEvent name="DisplayVaueEvent" type="c:CalculatorDisplayEvent"/>
+    <lightning:button label="{!v.label}" name="{!v.label}" onclick = "{!c.press}"></lightning:button>
+    
+</aura:component>
