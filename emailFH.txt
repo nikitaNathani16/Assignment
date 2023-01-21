@@ -1,0 +1,24 @@
+public class emailToFamilyHead {
+    public static void insertContact(List<contact> conlist){
+        //List<Contact> con1 = new List<Contact> (select Id, Name , Family_Head_Name__r.Name, Family_Head_Name__r.Email,  Family_Head_Name__c from Contact);
+        List<Id> familyHeadId = new List<Id>();
+        List<Messaging.SingleEmailMessage> emails = new List<Messaging.SingleEmailMessage>();
+        for(Contact con : conlist){
+            familyHeadId.add(con.Family_Head_Name__c);                              
+        }
+        List<String> emailAddresses = new List<String>();
+        for(Contact c : [select Id, Name, Email from Contact where Id IN :familyHeadId]){
+            emailAddresses.add(c.Email);
+        }
+        Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
+        email.SetToAddresses(emailAddresses);
+        for(Contact con2 : conlist){
+            email.subject = 'Congrats New Voter added';
+            email.plaintextbody = 'The voter has been added' ;
+            emails.add(email);
+            
+        }
+        Messaging.sendEmail(emails);  
+    }
+    
+}
