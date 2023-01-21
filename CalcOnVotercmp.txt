@@ -1,0 +1,14 @@
+<aura:component controller="AuraControllerCalc" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:attribute name="result" type="String"/>
+    <aura:handler event="c:VoterResultEvent" action="{!c.calculatorResultOnVoterController}"/>
+    
+    
+
+    
+    <lightning:card >
+        
+    The Result of calculator is: "{!v.result}"
+    </lightning:card>
+    
+</aura:component>
