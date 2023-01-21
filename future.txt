@@ -1,0 +1,39 @@
+public class userFromFamilyHeadUsingFuture {
+    public static void createContact(){
+        
+        Contact con = new Contact();
+        con.FirstName = 'nikita12';
+        con.LastName = 'nathani12';
+        con.Family_Head__c = true;
+        //con.Family_Head_Name__c = 'Rajkumar';
+        con.Email ='nikita.nathani123@deciphercloud.com';
+        con.MailingCountry = 'India';
+        con.MailingState = 'Maharashtra';
+        
+        Insert con;
+        createUserFromContact(con.FirstName, con.LastName, con.Email );
+        system.debug(con);
+    }
+    @future
+    public static void createUserFromContact(string FirstName, string LastName, string Email ){
+        //List<User> uList = new List<User>();
+           // Contact c = [select Id, Name, Family_Head__c, Family_Head_Name__c from Contact where Name ='Naina1' ];
+            User u = new User();
+            u.FirstName = FirstName;
+            u.LastName = LastName;
+            u.Alias = 'qqq';
+            u.Email = Email;
+            u.IsActive =true;
+            u.ProfileId ='00e5h000004K5fKAAS';
+            u.Username = 'niki.ncww6@deciphercloud.com';
+            u.TimeZoneSidKey = 'America/Los_Angeles';
+            u.LocaleSidKey = 'en_US';
+            u.EmailEncodingKey = 'UTF-8';
+            u.LanguageLocaleKey = 'en_US'; 
+        
+        
+        insert u;
+        system.debug(u);
+    }
+    
+}
