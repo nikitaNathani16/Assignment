@@ -1,0 +1,63 @@
+@istest
+public class AuraControllerCalcTest {
+    public string operator;
+    @istest
+    static void getResulytest(){
+        //AuraControllerCalc acc = new AuraControllerCalc();
+        String num1;
+        String num2;
+        string operator;
+        Integer result;
+        AuraControllerCalc.getResult('5', 'add', '5');
+        AuraControllerCalc.getResult('5', 'multiply', '5');
+        AuraControllerCalc.getResult('5', 'divide', '5');
+        //AuraControllerCalc.getResult('num1', 'add', 'num2');
+        AuraControllerCalc.getResult('5', 'subtract', '5');
+        
+    }
+    @istest
+    static void sumTest(){
+        string num1 ='5';
+        string num2 ='5';
+        Integer a=Integer.valueOf(num1);
+        Integer b=Integer.valueOf(num2);
+        Integer result = a + b;
+        
+       // return result;
+        AuraControllerCalc.sum(num1, num2);
+        
+    }  
+    @istest
+    static void MultiplyTest(){
+        string num1 ='5';
+        string num2 ='5';
+        Integer a=Integer.valueOf(num1);
+        Integer b=Integer.valueOf(num2);
+        Integer result = a * b;
+       // return result;
+        AuraControllerCalc.multiply(num1, num2);
+    }
+    @istest
+    static void divideTest(){
+        string num1 ='5';
+        string num2 ='5';
+        Integer a=Integer.valueOf(num1);
+        Integer b=Integer.valueOf(num2);
+        Integer result = a / b;
+       // return result;
+        AuraControllerCalc.divide(num1, num2);
+        
+    } 
+   @istest
+    static void subtractTest(){
+        string num1 ='5';
+        string num2 ='5';
+        Integer a=Integer.valueOf(num1);
+        Integer b=Integer.valueOf(num2);
+        Integer result = a - b;
+       // return result;
+        AuraControllerCalc.subtract(num1, num2);
+    }  
+        
+        
+    }
