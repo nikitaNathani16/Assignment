@@ -1,0 +1,39 @@
+<aura:component controller="AuraControllerCalc" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="buttonValue" type="String"/>
+    <aura:attribute name="numberOne" type="string"/>
+    <aura:attribute name="operator"  type="string"/>
+    <aura:attribute name="numberTwo" type="String"/>
+    <aura:attribute name="result" type="string"/>
+    <aura:attribute name="finalresult" type="integer"/>
+    <!-- <aura:registerEvent name="VoterResultEvent" type="c:VoterResultEvent"/> -->
+    
+    
+    <aura:handler name="DisplayVaueEvent" event="c:CalculatorDisplayEvent" action="{!c.showValues}"/>
+    <aura:registerEvent name="VoterResultEvent1" type="c:VoterResultEvent"/>
+    <div class="slds-box" style="display: inline-block">
+        
+        <lightning:card>
+            
+            <c:calculatorOutputText result='{!v.result}'/>
+            
+            <c:calculatorButton label="7" />
+            <c:calculatorButton label="8"/>
+            <c:calculatorButton label="9"/>
+            <c:calculatorButton label="/"/><br/>
+            <c:calculatorButton label="4"/>
+            <c:calculatorButton label="5"/>
+            <c:calculatorButton label="6"/>
+            <c:calculatorButton label="*"/><br/>
+            <c:calculatorButton label="1"/>
+            <c:calculatorButton label="2"/>
+            <c:calculatorButton label="3"/>
+            <c:calculatorButton label="-"/><br/>
+            <c:calculatorButton label="0"/>
+            <c:calculatorButton label="."/>
+            <c:calculatorButton label="="/>
+            <c:calculatorButton label="+"/>  
+            
+        </lightning:card>
+    </div> 
+    
+</aura:component>
