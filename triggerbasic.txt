@@ -1,0 +1,272 @@
+trigger TriggerEventsBasics on Case (before insert, before delete, before Update, after insert, after update, after delete, after Undelete) {
+    TriggerEventsConcept ec = new TriggerEventsConcept();
+    //Before Insert Trigger.New
+    if(trigger.isBefore==True && trigger.isInsert==True){
+        ec.InsertFunction(Trigger.new);
+        system.debug(ec);
+    }
+
+    if(trigger.isBefore==True && trigger.isInsert==True){
+        ec.UpdateFunction(Trigger.new);
+        system.debug(ec);
+    }
+
+    if(trigger.isBefore==True && trigger.isInsert==True){
+        ec.DeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isInsert==True){
+        ec.unDeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+     //Before Insert Trigger.old
+    
+    if(trigger.isBefore==True && trigger.isInsert==True){
+        //ec.InsertFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isInsert==True){
+        ec.UpdateFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isInsert==True){
+        ec.DeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isInsert==True){
+        ec.unDeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    
+    //Before delete Trigger.new
+    
+    
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.InsertFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.UpdateFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.DeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.unDeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    
+    //Before Delete Trigger.old
+    
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.InsertFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.UpdateFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.DeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.unDeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    
+    //Before Update Trigger.New
+    
+    if(trigger.isBefore==True && trigger.isUpdate==True){
+        ec.InsertFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isUpdate==True){
+        ec.UpdateFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isUpdate==True){
+        ec.DeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isUpdate==True){
+        ec.unDeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    
+    //Before Update Trigger.old
+    
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.InsertFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.UpdateFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.DeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isBefore==True && trigger.isDelete==True){
+        ec.unDeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    
+    //After insert Trigger.New
+    
+    if(trigger.isAfter==True && trigger.isInsert==True){
+        ec.InsertFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isInsert==True){
+        ec.UpdateFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isInsert==True){
+        ec.DeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isInsert==True){
+        ec.unDeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    
+    //after Insert trigger.old
+    
+    if(trigger.isAfter==True && trigger.isInsert==True){
+        ec.InsertFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isInsert==True){
+        ec.UpdateFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isInsert==True){
+        ec.DeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isInsert==True){
+        ec.unDeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    
+    //After Update Trigger.new
+    
+    if(trigger.isAfter==True && trigger.isUpdate==True){
+        ec.InsertFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUpdate==True){
+        ec.UpdateFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUpdate==True){
+        ec.DeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUpdate==True){
+        ec.unDeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    
+    //After Update Trigger.old
+    
+    if(trigger.isAfter==True && trigger.isUpdate==True){
+        ec.InsertFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUpdate==True){
+        ec.UpdateFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUpdate==True){
+        ec.DeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUpdate==True){
+        ec.unDeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    
+    //After Delete trigger.new
+
+    
+    if(trigger.isAfter==True && trigger.isDelete==True){
+        ec.InsertFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isDelete==True){
+        ec.UpdateFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isDelete==True){
+        ec.DeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isDelete==True){
+        ec.unDeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    
+    //After delete trigger.Old
+
+    
+    if(trigger.isAfter==True && trigger.isDelete==True){
+        ec.InsertFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isDelete==True){
+        ec.UpdateFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isDelete==True){
+        ec.DeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isDelete==True){
+        ec.unDeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    
+    //After Undelete Trigger.new
+
+    if(trigger.isAfter==True && trigger.isUndelete==True){
+        ec.InsertFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUndelete==True){
+        ec.UpdateFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUndelete==True){
+        ec.DeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUndelete==True){
+        ec.unDeleteFunction(Trigger.new);
+        system.debug(ec);
+    }
+    
+    ////After Update Trigger.new
+    
+    if(trigger.isAfter==True && trigger.isUndelete==True){
+        ec.InsertFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUndelete==True){
+        ec.UpdateFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUndelete==True){
+        ec.DeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+    if(trigger.isAfter==True && trigger.isUndelete==True){
+        ec.unDeleteFunction(Trigger.old);
+        system.debug(ec);
+    }
+
+}
