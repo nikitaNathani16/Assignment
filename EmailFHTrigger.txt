@@ -1,0 +1,4 @@
+trigger emailToFamilyHeadTrigger on Contact (after insert) {
+    emailToFamilyHead.insertContact(Trigger.new);
+
+}
