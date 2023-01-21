@@ -1,0 +1,20 @@
+/*({
+    calculatorResultOnVoterController : function(component, event, helper) {
+        console.log('in handler');
+        var msg = event.getParam("Result");
+        console.log('msg' + msg);
+        
+        component.set("v.result", msg);
+    }
+})*/
+
+({
+    calculatorResultOnVoterController : function(cmp, event) {
+        var message = event.getParam("Result");
+
+        // set the handler attributes based on event data
+        cmp.set("v.result", message);
+        
+        
+    }
+})
