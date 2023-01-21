@@ -1,0 +1,14 @@
+<aura:component  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+   <aura:attribute name="buttonValue" type="String"/>
+    <aura:attribute name="numberOne" type="string"/>
+    <aura:attribute name="operator"  type="string"/>
+    <aura:attribute name="numberTwo" type="String"/>
+    <aura:attribute name="result" type="string"/>
+    <aura:attribute name="finalresult" type="integer"/>
+    <aura:registerEvent name="VoterResultEvent" type="c:VoterResultEvent"/>
+    
+    <ui:outputText value="{!v.result}" /><br/>
+    
+    
+    
+</aura:component>
