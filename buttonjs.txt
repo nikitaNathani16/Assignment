@@ -1,0 +1,32 @@
+({
+    press : function(component, event, helper) {
+        var buttonName = event.getSource().get("v.name");
+        console.log('buttonName=='+buttonName);
+        // Get the component event by using the
+        // name value from aura:registerEvent
+        var cmpEvent = component.getEvent("DisplayVaueEvent");
+        cmpEvent.setParams({"message" : buttonName });
+        cmpEvent.fire();
+        
+          
+        
+        console.log('in press button event');
+        //var  number1;
+        //var operator;
+    }		
+        
+        
+        //console.log('buttonName==========='+buttonName);
+       //component.set(number1,'buttonName');
+        //action.setParams({"num1" : number1})
+       //  component.set("number1", component.get("buttonName") + buttonName);
+       /* if(buttonName >=0 && buttonName <=9 ){
+           
+          number1 = number1 + buttonName; 
+            console.log('number1'+number1);
+        }else if(buttonName == '+' || buttonName == '-' || buttonName == '/' || buttonName == '*'){
+          operator = buttonName; 
+            console.log('number1'+operator); 
+        } */
+    
+})
