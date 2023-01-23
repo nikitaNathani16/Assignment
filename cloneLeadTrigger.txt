@@ -1,0 +1,5 @@
+trigger CloneLeadTrigger on Lead (before insert) {
+     public static boolean isRecurssion = true;
+    CloneLeadRecord.cloneRecord(Trigger.new);
+
+}
